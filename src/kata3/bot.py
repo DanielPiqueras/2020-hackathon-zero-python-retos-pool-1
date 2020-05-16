@@ -10,22 +10,17 @@ logger = logging.getLogger(__name__)
 
 
 # Definimos algunas funciones para los comandos. Estos generalmente toman los dos argumentos update y context
-def start(update, context):
-    """Envia un mensaje cuando se emita el comando /start."""
-    return ""
+def start(update, context): 
+    return 'Hola, Geeks!'
 
 def help(update, context):
-    """Envia un mensaje cuando se emita el comando /help."""
-    return ""
+    return 'Ayudame!'
 
 def mayus(update, context):
-        #
-        return ""
-
+    return context.args[0].upper()
+    
 def alreves(update, context):
-    """Repite el mensaje del usuario."""
-    #
-    return ""
+    return update.message.text[::-1]
 
 def error(update, context):
     """Envia los errores por consola"""
@@ -37,7 +32,7 @@ def main():
     updater = Updater("", use_context=True)
 
     # Es el Registro de Comandos a través del dispartcher
-    dp = #
+    dp = updater.dispatcher
 
     # Añadimos a la lista de Registro todos los comandos con su función [start - help - mayus]
     #

@@ -13,7 +13,11 @@ class Snake():
 
     # Manejo del pressed [KEYDOWN] de las teclas [K_RIGHT - K_LEFT - K_UP -K_DOWN ]
     def controller(self, event, pygame):
-        
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_LEFT:
+                self.direction = "LEFT"
+                
+        pass
     # Controla el cambio de  las direcciones
     # Orientaciones
     # Vertical      -> Movimientos [RIGHT - LEFT]
@@ -50,7 +54,7 @@ class Game():
 
     # función de salida
     def exit(self, event, pygame):
-        #
+        pass
         #
     
     # Posición aleatorio entre el ranto [0,49] * 10  
@@ -60,6 +64,7 @@ class Game():
     # Si colisionas con una fruta, sumas 1
     # Sino decrementas en 1 el body del snake
     def eat(self, snake):
+        pass
         #
         #    
         #    
@@ -71,17 +76,7 @@ class Game():
     # Posición snake[1] >= 500 ó snake[1] <= 0                  -> Muere
     # Posición del snake choca con sigo mismo menos la cabeza   -> Muere 
     def dead(self, snake):
-        #
-        #
-        #
-        
-        #
-        #
-        #
-        
-        #
-        #
-        #
+        pass
         
             
 # Entry Point
@@ -121,5 +116,5 @@ def main():
 # Comienza la aventura!!!!
 # Descomentar para lanzar el juego en local
 # Comentar para validar con el oráculo
-# main()
-# pygame.quit()
+ #main()
+ #pygame.quit()
